@@ -35,3 +35,4 @@ cmake-build-*/
 ChangeLogMemo.qvnotebook/
 qvnotebook/
 00diary
+changelog2json.pl
