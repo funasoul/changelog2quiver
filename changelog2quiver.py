@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # vim: set fileencoding=utf-8 :
 # -*- coding: utf-8 -*-
-#
-# Last modified: Sat, 17 Dec 2016 04:54:02 +0900
+# Author: Akira Funahasi <funa@bio.keio.ac.jp>
+# Last modified: Sat, 17 Dec 2016 05:14:51 +0900
 # 
 import errno
 import datetime
@@ -67,7 +67,6 @@ def create_notebook(name):
     f = open(os.path.join(path, "meta.json"), "w")
     json.dump(notebook, f, ensure_ascii=False, indent=2)
     return path
-
 
 def create_note(uuid, unixtimestamp, tag, title, data):
     meta = {
@@ -174,7 +173,7 @@ def main():
             #print "=== END\n"
 
     # create notebook directory and notes
-    print "OK! will write notes"
+    print "Exporting notes to ChangeLogMemo.qvnotebook ..."
     notebook_dir = create_notebook('ChangeLogMemo')
     dump_note(notebook_dir, dict_meta, dict_content)
 
